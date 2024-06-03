@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pebble/static/css/main.e6c13ad2.css",
-    "main.js": "/pebble/static/js/main.43498300.js",
+    "main.js": "/pebble/static/js/main.ccccf22c.js",
     "index.html": "/pebble/index.html",
     "main.e6c13ad2.css.map": "/pebble/static/css/main.e6c13ad2.css.map",
-    "main.43498300.js.map": "/pebble/static/js/main.43498300.js.map"
+    "main.ccccf22c.js.map": "/pebble/static/js/main.ccccf22c.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.43498300.js"
+    "static/js/main.ccccf22c.js"
   ]
 }
