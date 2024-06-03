@@ -10,6 +10,13 @@ const ContentWrapper = styled.main`
 	justify-content: center;
 	align-items: center;
 	gap: 100px;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 20px;
+		height: auto;
+		gap: 20px;
+	}
 `;
 
 const Section = styled.section`
@@ -17,11 +24,19 @@ const Section = styled.section`
 	flex-direction: column;
 	justify-content: space-evenly;
 	width: 450px;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const Image = styled.img`
 	width: 550px;
 	height: auto;
+
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const TitleWrapper = styled.div`
@@ -42,6 +57,10 @@ const Text = styled.p`
 	font-family: "Saira Condensed", "Courier New", Courier, monospace;
 	font-weight: 700;
 	line-height: 1.1;
+
+	@media (max-width: 768px) {
+		font-size: 50px;
+	}
 `;
 
 const Description = styled.p`
@@ -71,7 +90,10 @@ const Button = styled.button`
 
 const MainContent = () => (
 	<ContentWrapper>
-		<Image src="/snap-image.png" alt="Snap image" />
+		<Image
+			src="https://kryturek.github.io/pebble/snap-image.png"
+			alt="Snap image"
+		/>
 		<Section>
 			<TitleWrapper>
 				<Bollard />

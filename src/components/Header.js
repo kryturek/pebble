@@ -13,6 +13,12 @@ const HeaderWrapper = styled.header`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+
+	@media (max-width: 768px) {
+		height: auto;
+		/* padding: 20px; */
+		overflow: hidden;
+	}
 `;
 
 const Background = styled.div`
@@ -21,9 +27,15 @@ const Background = styled.div`
 	left: 0;
 	width: 100%;
 	height: 730px;
-	background: url("/hero-image.png") no-repeat center center/cover;
+	background: url("https://kryturek.github.io/pebble/hero-image.png") no-repeat
+		center center/cover;
 	clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 	z-index: -1;
+
+	@media (max-width: 768px) {
+		height: 500px;
+		background-position: right;
+	}
 `;
 
 const OrangeCat = styled.span`
@@ -39,6 +51,17 @@ const TitleWrapper = styled.div`
 	height: 300px;
 	font-family: "Saira Condensed", "Courier New", Courier, monospace;
 	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+
+	@media (max-width: 768px) {
+		width: 100%;
+		height: auto;
+		padding: 20px;
+		color: #ddd;
+		text-shadow: 3px 3px 0px rgba(50, 50, 50, 1);
+		/* text-shadow: -3px -3px 0px rgba(50, 50, 50, 1); */
+		/* visibility: hidden; */
+		display: none;
+	}
 `;
 
 const Title = styled.h1`
@@ -48,6 +71,12 @@ const Title = styled.h1`
 	padding-top: 160px;
 	text-align: left;
 	line-height: 90px;
+
+	@media (max-width: 768px) {
+		font-size: 64px;
+		padding-left: 20px;
+		padding-top: 20px;
+	}
 `;
 
 const ButtonWrapper = styled.div`
@@ -59,6 +88,16 @@ const ButtonWrapper = styled.div`
 	width: 500px;
 	height: 150px;
 	box-shadow: 0px 21px 76px rgba(173, 122, 49, 0.16);
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		width: 70%;
+		height: auto;
+		padding: 20px;
+		margin-bottom: 20px;
+		margin-top: 50px;
+		box-shadow: 0px 21px 76px rgba(173, 122, 49, 0.46);
+	}
 `;
 
 const Button = styled.button`
@@ -70,6 +109,10 @@ const Button = styled.button`
 	cursor: pointer;
 	&:hover {
 		background-color: #ddd;
+	}
+
+	@media (max-width: 768px) {
+		border-bottom: #999 solid 5px;
 	}
 `;
 
@@ -85,13 +128,22 @@ const Header = () => {
 			</TitleWrapper>
 			<ButtonWrapper>
 				<Button>
-					<img src="/assets/Story.svg" alt="Story" />
+					<img
+						src="https://kryturek.github.io/pebble/assets/Story.svg"
+						alt="Story"
+					/>
 				</Button>
 				<Button>
-					<img src="/assets/Leaders.svg" alt="Leaders" />
+					<img
+						src="https://kryturek.github.io/pebble/assets/Leaders.svg"
+						alt="Leaders"
+					/>
 				</Button>
 				<Button>
-					<img src="/assets/Shop.svg" alt="Shop" />
+					<img
+						src="https://kryturek.github.io/pebble/assets/Shop.svg"
+						alt="Shop"
+					/>
 				</Button>
 			</ButtonWrapper>
 		</HeaderWrapper>

@@ -16,6 +16,15 @@ const NavbarWrapper = styled.nav`
 	transition: transform 0.3s ease-in-out;
 	transform: ${({ hidden }) =>
 		hidden ? "translateY(-100%)" : "translateY(0)"};
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		padding: 10px;
+		position: relative;
+		background-color: rgba(0, 0, 0, 0.3);
+		transform: none;
+		transition: none;
+	}
 `;
 
 const Logo = styled.div`
@@ -26,6 +35,11 @@ const NavLinks = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 40px;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		gap: 20px;
+	}
 `;
 
 const NavLink = styled.a`
@@ -65,7 +79,7 @@ const Navbar = () => {
 		<NavbarWrapper hidden={hidden}>
 			<Logo>
 				<img
-					src="/assets/Logo.svg"
+					src="https://kryturek.github.io/pebble/assets/Logo.svg"
 					alt="Pebble Logo"
 					width="203"
 					height="49"
